@@ -8,12 +8,10 @@ test: build/exe
 	./build/exe Edgar
 	./build/exe Unidades de millar
 
-build: build/exe
-
-build-dir:
+build:
 	mkdir build
 
-build/exe: build-dir src/main.cc
+build/exe: build src/main.cc
 	g++ src/main.cc -o  build/exe
 
 clean:
