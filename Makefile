@@ -10,7 +10,10 @@ test: build/exe
 
 build: build/exe
 
-build/exe: src/main.cc
+build-dir:
+	mkdir build
+
+build/exe: build-dir src/main.cc
 	g++ src/main.cc -o  build/exe
 
 clean:
